@@ -2,9 +2,17 @@ package banking;
 
 public abstract class AbstractAccount {
 
-    public abstract boolean deposit(double expected);
+    private float balance;
 
-    public abstract double getBalance();
+    public abstract boolean deposit(float expected);
 
-    public abstract boolean withdraw(double v);
+    public abstract boolean withdraw(float amount);
+
+    public float getBalance(){
+        return balance;
+    }
+
+    public void setBalance(float balance) {
+        this.balance = balance;
+    }
 }
